@@ -2,10 +2,10 @@
 
 ## Team / attendee
 
-- Team name (if applicable): N/A — Solo participant
+- Team name : ActReactGuard
 - Members and GitHub usernames:
   - Thota Madhulika — `@butterfly-artist`
-- Profile links (optional):
+- Profile links:
   - GitHub: https://github.com/butterfly-artist
 
 ## Challenge
@@ -19,9 +19,9 @@ Select the challenge you are entering:
 ## Project links
 
 - Public GitHub repository:
-  - [REPLACE WITH FINAL PUBLIC PIPEGUARD GITHUB REPOSITORY]
+  - https://github.com/butterfly-artist/PipeLine-Guard-AI
 - Open-source license (link to the license file):
-  - MIT License — [REPLACE WITH FINAL LICENSE LINK]
+  - MIT License — https://github.com/butterfly-artist/PipeLine-Guard-AI/blob/main/LICENSE
 
 ## Problem and solution
 
@@ -62,22 +62,44 @@ Schema + Relationship Detection
         v
 Data Quality Rule Engine
         |
-        v
-Pipeline Log Context
-        |
-        v
-Context Engine
-        |
-        v
-Gemma Open-Weight AI
-        |
-        v
-Evidence-Grounded Diagnosis
-        |
-        +----> Root Cause
-        |
-        +----> Impact Analysis
-        |
-        +----> Remediation
-        |
-        +----> Reusable Quality Rules
+        +----------------------+
+        |                      |
+        v                      v
+DQ Findings             Pipeline Logs
+        |                      |
+        +----------+-----------+
+                   |
+                   v
+            Context Engine
+            Evidence Pack
+                   |
+                   v
+          Gemma Open-Weight AI
+              Reasoning
+                   |
+                   v
+       Evidence-Grounded Diagnosis
+                   |
+        +----------+----------+----------+
+        |                     |          |
+        v                     v          v
+    Root Cause             Impact   Remediation
+                                      |
+                                      v
+                               Quality Rules
+
+```
+
+
+
+### Why this version is better
+
+It communicates your **main differentiator in one diagram**:
+
+> **Python establishes what happened; Gemma reasons about why it happened and what to do next.**
+
+That is much more compelling for the **Best Open-Source AI Project** challenge than presenting PipeGuard as simply an AI-powered data profiler.
+
+Your underlying specification explicitly describes this separation as **“DETERMINISTIC COMPUTATION + OPEN-WEIGHT AI REASONING = DATA QUALITY INTELLIGENCE.”** :contentReference[oaicite:3]{index=3}
+
+So yes: **your submission is on the right track.** Keep the text you already wrote, but use the revised workflow above.
